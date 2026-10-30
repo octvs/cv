@@ -1,412 +1,195 @@
-#import "@preview/pro-academic-cv:0.1.0": *
-
-#show: resume.with(
-  author-info: (
-    name: "Orhun Cenk Taskin",
-    primary-info: [
-      #link("tel:+4915236397337")[Phone] | #link(
-        "mailto:octvs@posteo.de",
-      )[Email]
-    ],
-    secondary-info: [
-      #link("https://www.linkedin.com/in/octaskin")[Linkedin] | #link(
-        "https://github.com/octvs",
-      )[Github]
-    ],
-    tertiary-info: "Bremen, 28215, Germany",
-  ),
-  author-position: center,
-)
-
-== Objective
-Seeking a challenging position in \[your field\] to leverage my expertise in
-\[your key skills\]. Aiming to contribute to innovative projects at the
-intersection of \[your interests\] and practical problem-solving in fields such
-as \[specific areas of interest\].
-
-== Experience
-#r2c2-entry-list(
-  (
-    entry-header-args: (
-      //TODO: Center for Technomatehematik / High-Performance Visualization
-      top-left: [#link("https://www.uni-bremen.de/en/")[University of Bremen]],
-      top-right: [07.2024 - Present],
-      bottom-left: [Research Assistant],
-      bottom-right: [Bremen, Germany],
-    ),
-    list-items: (
-      [Developed \[specific achievement\] achieving \[specific metric\] in
-        \[specific area\]],
-      [Implemented \[technology/method\], enhancing \[specific aspect\] by
-        \[specific percentage\]],
-      [Conducted analysis on \[specific data\], identifying \[key findings\]],
-      [Presented findings at \[specific event\], receiving \[specific
-        recognition\]],
-    ),
-  ),
-  // TODO: Decide where to write the institute/sub-division name, two
-  // alternatives are below
-  (
-    entry-header-args: (
-      top-left: [#link("https://www.dlr.de")[German Aerospace Center] / #link(
-          "https://www.dlr.de/en/sc",
-        )[Institute of Software Technology]],
-      top-right: [07.2023 - 07.2024],
-      bottom-left: [Research Assistant],
-      bottom-right: [Braunschweig, Germany],
-    ),
-    list-items: (),
-  ),
-  (
-    entry-header-args: (
-      top-left: [#link("https://www.fraunhofer.de/en.html")[Fraunhofer
-        Society]],
-      top-right: [01.2020 - 07.2023],
-      bottom-left: [Student Assistant @ #link(
-          "https://www.cml.fraunhofer.de/en.html",
-        )[Center for Maritime Logistics and Services]],
-      bottom-right: [Hamburg, Germany],
-    ),
-    list-items: (),
-  ),
-  (
-    entry-header-args: (
-      top-left: [#link("https://www.tuhh.de/tuhh/en")[Hamburg University of
-        Technology]],
-      top-right: [10.2020 - 01.2022],
-      bottom-left: [Teaching Assistant @ #link(
-          "https://www.tuhh.de/ics",
-        )[Institute of Control Systems]],
-      bottom-right: [Hamburg, Germany],
-    ),
-    list-items: (),
+#import "@preview/modernpro-cv:2.1.2": *
+// TODO: Check this one https://cognition.maxplanckschools.org/56008/example-curriculum-vitae.pdf
+#let profile = (
+  name: [Orhun Cenk Taskin],
+  role: [Research Assistant],
+  address: [Bremen, Germany],
+  // photo: image(
+  //   "portrait.jpg",
+  //   width: 16mm,
+  //   height: 20mm,
+  //   fit: "cover",
+  //   alt: "Portrait of Your Name",
+  // ),
+  contacts: (
+    (text: [octvs\@posteo.de], link: "mailto:octvs@posteo.de"),
+    (text: [github.com/octvs], link: "https://github.com/octvs"),
+    (text: [+49 1523 6397337], link: "tel:+4915236397337"),
   ),
 )
 
-== Education
-#r2c2-entry-list(
-  (
-    entry-header-args: (
-      top-left: [#link("https://www.tuhh.de/tuhh/en")[Hamburg University of
-        Technology]],
-      top-right: [09.2019 - 02.2024],
-      bottom-left: [M. Sc. Mechatronics / Intelligent Systems and Robotics],
-      bottom-right: [Hamburg, Germany],
-    ),
-    list-items: (
-      [GPA: 3.7/4.0],
-    ),
-  ),
-  (
-    entry-header-args: (
-      top-left: [#link("https://www.boun.edu.tr/")[Bogazici University]],
-      top-right: [09.2013 - 06.2019],
-      bottom-left: [B. Sc. Mechanical Engineering],
-      bottom-right: [Istanbul, Turkey],
-    ),
-    list-items: (
-      [GPA: 3.1/4.0],
-    ),
-  ),
+// Single-column academic CV. Everything below `profile` is optional:
+//   preset: "compact" | "default" | "relaxed"   vertical rhythm
+//   accent: rgb("#1e3a5f")                      the one colour in the document
+//   layout: (continue-header: true)              compact identity from page 2
+//   columns: 2                                  two-column variant, see cv-double.typ
+#show: cv.with(profile: profile, accent: rgb("#006c66"))
+
+// #section("Research Profile")
+// #summary[
+//   One or two sentences on the question that connects your work and the methods
+//   you use to answer it.
+// ]
+// #section-gap
+//
+#section("Experience")
+#experience(
+  title: "Research Assistant",
+  institution: [#link("https://www.uni-bremen.de/en/")[University of Bremen],
+    #link("https://www.uni-bremen.de/en/ag-hpvis")[High-Performance
+      Visualization]],
+  location: "Bremen, Germany",
+  date: "07.2024 - Present",
+  details: [
+    - Project lead on project #link(
+        "https://www.uni-bremen.de/ag-hpvis/digitwinait",
+      )[DigiTwinAIT], funded by DLR Spaceagentur, focused on scene
+      understanding.
+    - Management & supervision on High Performance Visualization class and
+      seminar.
+    - Peer-review on IEEE Aerospace 2027 & 2025, VRST 2026.
+  ],
+)
+#experience(
+  title: "Research Assistant",
+  institution: [#link("https://www.dlr.de")[German Aerospace Center],
+    #link("https://www.dlr.de/en/sc")[Institute of Software Technology]],
+  location: "Braunschweig, Germany",
+  date: "07.2023 - 07.2024",
+  details: [
+    - Scene understanding for XR applications through CV & sensor fusion.
+  ],
+)
+#experience(
+  title: "Teaching Assistant",
+  institution: [#link("https://www.tuhh.de/tuhh/en")[Hamburg University of
+      Technology],
+    #link("https://www.tuhh.de/ics")[Institute of Control Systems]],
+  location: "Hamburg, Germany",
+  date: "10.2020 - 01.2022",
+  details: [
+    - Supervision of exercise classes on Control Systems Theory and Design and
+      contribution to teaching material.
+  ],
 )
 
-== Projects
-#r2c2-entry-list(
-  (
-    entry-header-args: (
-      top-left: [Project A: \[Brief Description\]],
-      top-right: [Month Year - Month Year],
-      bottom-left: [Tools: \[List of tools and technologies used\]],
-      bottom-right: [#link(
-        "https://github.com/your-username/project-a",
-      )[\@your-username/project-a]],
-    ),
-    list-items: (
-      [Developed \[specific feature/system\] for \[specific purpose\]],
-      [Implemented \[specific technology\] for \[specific goal\], achieving
-        \[specific result\]],
-      [Created \[specific component\], ensuring \[specific benefit\]],
-      [Applied \[specific method\] to analyze \[specific aspect\]],
-    ),
-  ),
-  (
-    entry-header-args: (
-      top-left: [Project B: \[Brief Description\]],
-      top-right: [Month Year],
-      bottom-left: [Tools: \[List of tools and technologies used\]],
-      bottom-right: [#link(
-        "https://github.com/your-username/project-b",
-      )[\@your-username/project-b]],
-    ),
-    list-items: (
-      [Developed \[specific model/system\], achieving \[specific metric\]],
-      [Implemented \[specific feature\], processing \[specific volume\] of
-        data],
-      [Created \[specific visualization\] for \[specific purpose\]],
-      [Developed \[specific component\] for easy integration with \[specific
-        system\]],
-    ),
-  ),
+#experience(
+  title: "Student Assistant",
+  institution: [#link("https://www.fraunhofer.de/en.html")[Fraunhofer],
+    #link("https://www.cml.fraunhofer.de/en.html")[Center for Maritime
+      Logistics and Services]],
+  location: "Hamburg, Germany",
+  date: "01.2020 - 07.2023",
+  details: [
+    - Data driven modeling and forecast for maritime container logistics on
+      project #link(
+        "https://www.cml.fraunhofer.de/en/research-projects/C_TIMING.html",
+      )[C-Timing].
+    - Sensory data analysis and digital twin based forecast models for
+      container ships on project #link(
+        "https://www.cml.fraunhofer.de/en/research-projects/MARIA.html",
+      )[Maria].
+    - Implementation of image classification pipeline to automatize container
+      inspection on project #link(
+        "https://www.cml.fraunhofer.de/en/research-projects/COOKIE.html",
+      )[Cookie].
+  ],
 )
+#section-gap
 
-== Patents~&~Publications (note:C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis)
-#publication-entry-list(
-  (
-    (
-      category: "C",
-      value: [Your Name, et al. (Year). #link(
-          "https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX",
-        )[*Title of Conference Paper*]. In _Name of Conference Proceedings_,
-        pp. XX-XX. Publisher. Date, Location. DOI:
-        XX.XXXX/XXXXXXX.XXXX.XXXXXXX],
-    ),
-    (
-      category: "C",
-      value: [Your Name, et al. (Year). #link(
-          "https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX",
-        )[*Title of Conference Paper*]. In _Name of Conference Proceedings_,
-        pp. XX-XX. Publisher. Date, Location. DOI:
-        XX.XXXX/XXXXXXX.XXXX.XXXXXXX],
-    ),
-    (
-      category: "S",
-      value: [Your Name, et al. (Year). *Title of Submitted Paper*. Manuscript
-        submitted for publication in _Journal Name_.],
-    ),
-    (
-      category: "P",
-      value: [Inventor 1, Your Name, Inventor 3, et al. (Year). #link(
-          "https://patentoffice.gov/patent/XXXXXXXXX",
-        )[*Title of Patent*]. Patent Office, Patent No. XXXXXXXXX. Registration
-        Date: Date, Grant Date: Date, Publication Date: Date.],
-    ),
-    (
-      category: "J",
-      value: [Author 1, Your Name, Author 3, et al. (Year). #link(
-          "https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX",
-        )[*Title of Journal Article*]. _Journal Name_, Vol. XX, Issue X, pp.
-        XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX],
-    ),
-  ),
-  // number-style: "ascending",
-)
+#section("Education")
 
-== Skills
-#multi-line-list(
-  single-line-entry(
-    "Programming Languages:",
-    [Language 1, Language 2, Language 3, Language 4, Language 5],
-    [],
-  ),
-  single-line-entry(
-    "Web Technologies:",
-    [Technology 1, Technology 2, Technology 3, Technology 4, Technology 5],
-    [],
-  ),
-  single-line-entry(
-    "Database Systems:",
-    [Database 1, Database 2, Database 3],
-    [],
-  ),
-  single-line-entry(
-    "Data Science & Machine Learning:",
-    [Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6],
-    [],
-  ),
-  single-line-entry(
-    "Cloud Technologies:",
-    [Cloud Platform 1, Cloud Platform 2, Cloud Platform 3],
-    [],
-  ),
-  single-line-entry(
-    "DevOps & Version Control:",
-    [Tool 1, Tool 2, Tool 3, Tool 4, Tool 5],
-    [],
-  ),
-  single-line-entry(
-    "Specialized Area:",
-    [Skill 1, Skill 2, Skill 3, Skill 4],
-    [],
-  ),
-  single-line-entry(
-    "Mathematical & Statistical Tools:",
-    [Tool 1, Tool 2, Tool 3, Tool 4, Tool 5],
-    [],
-  ),
-  single-line-entry(
-    "Other Tools & Technologies:",
-    [Tool 1, Tool 2, Tool 3, Tool 4, Tool 5],
-    [],
-  ),
-  single-line-entry(
-    "Research Skills:",
-    [Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6],
-    [],
-  ),
+#education(
+  institution: [#link("https://www.tuhh.de/tuhh/en")[Hamburg University of
+    Technology]],
+  major: [M. Sc. Mechatronics / Intelligent Systems and Robotics],
+  date: "09.2019 - 02.2024",
+  location: "Hamburg, Germany",
+  description: [Thesis: Towards Compact Stereo Depth Estimation for Mobile
+    Mixed Reality Applications \
+    GPA: 3.7 / 4.0 #emph[(equiv.)] \ #emph[Graduated With Distinction]
+  ],
 )
+#education(
+  institution: [#link("https://www.boun.edu.tr/")[Bogazici University]],
+  major: [B. Sc. Mechanical Engineering],
+  date: "09.2013 - 06.2019",
+  location: "Istanbul, Turkey",
+  description: [Thesis: Navigation Aid for Visually Impaired Runners \
+    GPA: 3.1 / 4.0],
+)
+#section-gap
 
-== Honors~&~Awards
-- #r2c2-entry-header(
-    top-left: [Award Name A],
-    top-right: [Month Year],
-    bottom-left: [Awarding Institution/Organization],
-    bottom-right: [#link("https://award-link-a.com")[#link-icon()]],
-  )
-#r2c2-entry-list(
+#section("Publications")
+#entry(
+  title: [BiStereo: Teaching Networks to Look the Other Way],
+  right: "2026",
+  meta: [#emph[(WIP)] Taskin, Patil, Gerndt, Schmedemann, Schüppstuhl,
+    Albuquerque
+  ],
+)
+#section-gap
+
+
+#section("Achievements")
+#entry(
+  title: [#link(
+    "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database?detail=50016578",
+  )[DAAD Master's Degree Scholarship]],
+  right: "2019",
+)
+#entry(
+  title: [1#super[st] in #link(
+      "https://studyinturkiye.com/exams/ales/",
+    )[The Academic Personnel and Graduate Education Entrance Examination]],
+  right: "2019",
+)
+#entry(
+  title: [Top 250 in #link(
+      "https://en.wikipedia.org/wiki/Student_Selection_and_Placement_System",
+    )[University Entrance Exam]],
+  right: "2013",
+)
+#section-gap
+
+#section("Skills")
+#detail-line(title: "Programming", content: [Python, Bash, C++, C, Nix, Lua,
+  Java, SQL, LaTeX, Typst, HTML & CSS])
+#detail-line(title: "Tools", content: [PyTorch, ROS, SLURM, OpenCV, Tensorflow
+  (&-board)])
+#detail-line(title: "Language", content: [Turkish (native), English (fluent),
+  German (conversational)])
+#section-gap
+
+#section("Extracurricular")
+#detail-line(title: "OSS Contributions", content: [
+  #link(
+    "https://github.com/nixos/nixpkgs",
+  )[\@nixos/nixpkgs], #link(
+    "https://github.com/nix-community/home-manager",
+  )[\@nix-community/home-manager],
+  #link(
+    "https://github.com/papis/papis",
+  )[\@papis/papis]])
+#detail-line(title: "Hobbies", content: [Sailing, Diving, Slacklining])
+#section-gap
+
+#section("References")
+#reference-list(references: (
   (
-    entry-header-args: (
-      top-left: [Award Name B],
-      top-right: [Month Year],
-      bottom-left: [Awarding Institution/Organization],
-      bottom-right: [#link("https://award-link-b.com")[#link-icon()]],
-    ),
-    list-items: (
-      [Brief description of the award and its significance],
-      [Impact or recognition associated with the award],
-    ),
+    name: "Prof. Dr. Andreas Gerndt",
+    position: "Professor",
+    department: "High-Performance Visualization",
+    institution: "University of Bremen",
+    address: "Bremen, Germany",
+    email: "gerndt@uni-bremen.de",
   ),
   (
-    entry-header-args: (
-      top-left: [Competition Achievement],
-      top-right: [Month Year],
-      bottom-left: [Competition Name, Organizing Body],
-      bottom-right: [#link("https://competition-link.com")[#link-icon()]],
-    ),
-    list-items: (
-      [Specific achievement or rank in the competition],
-      [Skills or abilities demonstrated through this achievement],
-    ),
+    name: "Dr. Georgia Albuquerque",
+    position: "Group Leader",
+    department: "Institute of Software Technology",
+    institution: "German Aerospace Center",
+    address: "Braunschweig, Germany",
+    email: "georgia.albuquerque@dlr.de",
   ),
-)
-
-== Leadership Experience
-#r2c2-entry-list(
-  (
-    entry-header-args: (
-      top-left: [Leadership Role A],
-      top-right: [Month Year - Month Year],
-      bottom-left: [Organization/Institution Name],
-      bottom-right: [#link("https://organization-a-link.com")[#link-icon()]],
-    ),
-    list-items: (
-      [Key responsibility or achievement in this role],
-      [Quantifiable impact or improvement made during tenure],
-      [Initiative taken or project led],
-    ),
-  ),
-  (
-    entry-header-args: (
-      top-left: [Leadership Role B],
-      top-right: [Month Year - Month Year],
-      bottom-left: [Organization/Institution Name],
-      bottom-right: [#link("https://organization-b-link.com")[#link-icon()]],
-    ),
-    list-items: (
-      [Key responsibility or achievement in this role],
-      [Quantifiable impact or improvement made during tenure],
-      [Initiative taken or project led],
-    ),
-  ),
-)
-
-== Volunteer Experience
-#r2c2-entry-list(
-  (
-    entry-header-args: (
-      top-left: [Volunteer Role A],
-      top-right: [Month Year - Month Year],
-      bottom-left: [Organization Name],
-      bottom-right: [#link("https://volunteer-org-a-link.com")[#link-icon()]],
-    ),
-    list-items: (
-      [Key responsibility or contribution in this role],
-      [Impact of your volunteer work],
-      [Skills developed or applied during this experience],
-    ),
-  ),
-  (
-    entry-header-args: (
-      top-left: [Volunteer Role B],
-      top-right: [Month Year - Present],
-      bottom-left: [Organization Name],
-      bottom-right: [#link("https://volunteer-org-b-link.com")[#link-icon()]],
-    ),
-    list-items: (
-      [Key responsibility or contribution in this role],
-      [Impact of your volunteer work],
-      [Skills developed or applied during this experience],
-    ),
-  ),
-)
-
-== Professional Memberships
-#multi-line-list(
-  single-line-entry(
-    [Professional Organization A,],
-    [Membership ID: XXXXXXXX],
-    [Month Year - Present],
-  ),
-  single-line-entry(
-    [Professional Organization B,],
-    [Membership ID: XXXXXXXX],
-    [Month Year - Present],
-  ),
-  single-line-entry(
-    [Professional Organization C,],
-    [Membership ID: XXXXXXXX],
-    [Month Year - Present],
-  ),
-)
-
-== Certifications
-#multi-line-list(
-  single-line-entry([Certification A], [], [Month Year]),
-  single-line-entry([Certifying Body:], [Certification B], [Month Year]),
-  single-line-entry([Certifying Body:], [Certification C], [Month Year]),
-  single-line-entry([Certification D], [], [Month Year]),
-)
-
-== Additional Information
-#multi-line-text(
-  single-line-entry(
-    [Languages:],
-    [Language A (Proficiency level), Language B (Proficiency level), Language C
-      (Proficiency level)],
-    [],
-  ),
-  single-line-entry(
-    [Interests:],
-    [Interest 1, Interest 2, Interest 3, Interest 4],
-    [],
-  ),
-)
-
-== References
-#personal-info-list(
-  (
-    (
-      name: [Reference Person 1],
-      title: [Job Title, Department],
-      org: [Organization/Institution Name],
-      email: [email1\@example.com],
-      phone: [+X-XXX-XXX-XXXX],
-      note: [Relationship: e.g., Thesis Advisor, Manager, etc.],
-    ),
-    (
-      name: [Reference Person 2],
-      title: [Job Title, Department],
-      org: [Organization/Institution Name],
-      email: [email2\@example.com],
-      phone: [+X-XXX-XXX-XXXX],
-      note: [Relationship: e.g., Project Supervisor, Colleague, etc.],
-    ),
-    (
-      name: [Reference Person 3],
-      title: [Job Title, Department],
-      org: [Organization/Institution Name],
-      email: [email3\@example.com],
-      phone: [+X-XXX-XXX-XXXX],
-      note: [Relationship: e.g., Mentor, Collaborator, etc.],
-    ),
-  ),
-)
+))
