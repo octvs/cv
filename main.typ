@@ -41,13 +41,15 @@
   location: "Bremen, Germany",
   date: "07.2024 - Present",
   details: [
-    - Project lead on project #link(
+    - Project lead on #link(
         "https://www.uni-bremen.de/ag-hpvis/digitwinait",
-      )[DigiTwinAIT], funded by DLR Spaceagentur, focused on scene
-      understanding.
-    - Management & supervision on High Performance Visualization class and
-      seminar.
-    - Peer-review on IEEE Aerospace 2027 & 2025, VRST 2026.
+      )[DigiTwinAIT], which aims to develop XR framework to help spacecraft
+      manufacture on clean room environments through digital twins. Where the
+      personal contribution is on scene understanding.
+    - Managed and supervised the High-Performance Visualization course and
+      seminar, directing coursework and mentoring students.
+    - Peer-reviewed submissions for conferences, including IEEE Aerospace
+      (2025, 2027) and ACM VRST (2026).
   ],
 )
 #experience(
@@ -57,7 +59,8 @@
   location: "Braunschweig, Germany",
   date: "07.2023 - 07.2024",
   details: [
-    - Scene understanding for XR applications through CV & sensor fusion.
+    - Researched scene understanding for XR applications by combining computer
+      vision algorithms and sensor fusion.
   ],
 )
 #experience(
@@ -68,8 +71,8 @@
   location: "Hamburg, Germany",
   date: "10.2020 - 01.2022",
   details: [
-    - Supervision of exercise classes on Control Systems Theory and Design and
-      contribution to teaching material.
+    - Supervised exercise classes and contributed to teaching material on
+      Control Systems Theory and Design course.
   ],
 )
 
@@ -81,16 +84,16 @@
   location: "Hamburg, Germany",
   date: "01.2020 - 07.2023",
   details: [
-    - Data driven modeling and forecast for maritime container logistics on
-      project #link(
+    - Developed data-driven forecasting models for maritime container logistics
+      for the project #link(
         "https://www.cml.fraunhofer.de/en/research-projects/C_TIMING.html",
       )[C-Timing].
-    - Sensory data analysis and digital twin based forecast models for
-      container ships on project #link(
+    - Analyzed sensory data and built digital twin-based predictive models for
+      container ships for the project #link(
         "https://www.cml.fraunhofer.de/en/research-projects/MARIA.html",
       )[Maria].
-    - Implementation of image classification pipeline to automatize container
-      inspection on project #link(
+    - Implemented an automated image classification pipeline for container
+      inspection for the project #link(
         "https://www.cml.fraunhofer.de/en/research-projects/COOKIE.html",
       )[Cookie].
   ],
@@ -107,7 +110,8 @@
   location: "Hamburg, Germany",
   description: [Thesis: Towards Compact Stereo Depth Estimation for Mobile
     Mixed Reality Applications \
-    GPA: 3.7 / 4.0 #emph[(equiv.)] \ #emph[Graduated With Distinction]
+    Grade: 1.3 #emph[(GPA equiv. 3.7 / 4.0)] - #emph[Graduated With
+      Distinction]
   ],
 )
 #education(
@@ -124,8 +128,8 @@
 #entry(
   title: [BiStereo: Teaching Networks to Look the Other Way],
   right: "2026",
-  meta: [#emph[(WIP)] Taskin, Patil, Gerndt, Schmedemann, Schüppstuhl,
-    Albuquerque
+  meta: [Taskin, Patil, Gerndt, Schmedemann, Schüppstuhl, Albuquerque \
+    #emph[Under revision for resubmission.]
   ],
 )
 #section-gap
@@ -133,36 +137,44 @@
 
 #section("Achievements")
 #entry(
-  title: [#link(
-    "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database?detail=50016578",
-  )[DAAD Master's Degree Scholarship]],
+  title: [DAAD Scholarship],
   right: "2019",
+  meta: [Awarded full #link(
+      "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database?detail=50016578",
+    )[DAAD-TEV Master's Degree Scholarship] for postgraduate study in Germany.
+  ],
 )
 #entry(
-  title: [1#super[st] in #link(
+  title: [1#super[st] Place in National Graduate Exam],
+  right: "2019",
+  meta: [Ranked first among 120k participants in #link(
       "https://studyinturkiye.com/exams/ales/",
-    )[The Academic Personnel and Graduate Education Entrance Examination]],
-  right: "2019",
+    )[Academic Personnel and Graduate Education Entrance Examination].],
 )
 #entry(
-  title: [Top 250 in #link(
-      "https://en.wikipedia.org/wiki/Student_Selection_and_Placement_System",
-    )[University Entrance Exam]],
+  title: [Top 250 in National University Entrance Exam],
+  // title: [Top 250 in #link(
+  //     "https://en.wikipedia.org/wiki/Student_Selection_and_Placement_System",
+  //   )[University Entrance Exam]],
   right: "2013",
+  meta: [Achieved a top 0.01% rank out of over 2 million participants in the
+    national #link(
+      "https://en.wikipedia.org/wiki/Student_Selection_and_Placement_System",
+    )[ÖSYS / YKS examination].],
 )
 #section-gap
 
 #section("Skills")
-#detail-line(title: "Programming", content: [Python, Bash, C++, C, Nix, Lua,
-  Java, SQL, LaTeX, Typst, HTML & CSS])
-#detail-line(title: "Tools", content: [PyTorch, ROS, SLURM, OpenCV, Tensorflow
-  (&-board)])
+#detail-line(title: "Programming", content: [Python, C++, C, Rust, Bash, SQL,
+  LaTeX, Typst, Nix, Lua, Java, HTML/CSS])
+#detail-line(title: "Tools", content: [PyTorch, OpenCV, ROS, SLURM, TensorFlow,
+  TensorBoard, MPI, OpenMP, Unreal Engine, Matlab/Simulink])
 #detail-line(title: "Language", content: [Turkish (native), English (fluent),
   German (conversational)])
 #section-gap
 
 #section("Extracurricular")
-#detail-line(title: "OSS Contributions", content: [
+#detail-line(title: "Open Source Contributions", content: [
   #link(
     "https://github.com/nixos/nixpkgs",
   )[\@nixos/nixpkgs], #link(
